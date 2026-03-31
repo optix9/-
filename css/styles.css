@@ -19,7 +19,7 @@ body{
 
 .logo{
   font-weight: 700;
-  font-size: 32px;
+  font-size: 40px;
   color: #227198;
   font-family: "Funnel Display", sans-serif;
 
@@ -28,7 +28,7 @@ body{
 
 .logo:hover{
   font-weight: 800;
-  font-size: 40px;
+  font-size: 45px;
   color: #68cbec;
 
   text-shadow:
@@ -43,6 +43,8 @@ body{
   display: flex;
   gap: 30px;
   color: #4c83a2;
+  font-family: "Poiret One", sans-serif;
+  font-size: 35px;
 }
 
 .nav-links a:hover{
