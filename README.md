@@ -1,2 +1,1 @@
-# -
-cool math website
+Adaptable quizes that will make your skills soar!
