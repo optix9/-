@@ -4,6 +4,7 @@
 body{
   margin: 0;
   background-image: url("../images/wallpaper.jpg");
+  border: 3px #052345 Solid;
 }
 
 #top-homepage{
@@ -55,6 +56,7 @@ body{
 #hero{
   text-align: center;
   padding: 80px 20px 80px;
+  padding-bottom: 180px;
 }
 
 #hero h2{
@@ -97,4 +99,51 @@ body{
   font-size: 26px;
   transition: 0.3s ease;
   box-shadow: 2px 2px 5px #91f6df;
+}
+
+.divider {
+  height: 2.5px;
+  background: linear-gradient(to right, #1d2f37, #05ecd9);
+  width: 100%;
+}
+
+#explanation{
+  padding-top: 100px;
+  justify-content: center;
+  background-image: url("../images/wallpaper2.png");
+}
+
+#exp1{
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 100px;
+  margin: auto;
+  padding-left: 280px;
+}
+
+#exp1 h2{
+  font-family: "Funnel Display", sans-serif;
+  font-size: 45px;
+  color: #6da4c8;
+}
+
+#exp1 p{
+  font-family: "Poiret One", sans-serif;
+  font-size: 25px;
+  color: #e6ebef;
+}
+
+#exp1 img{
+  border: 2px Solid #224780;
+  border-radius: 7px;
+  height: 350x;
+  width: 425px;
+}
+
+.exp1-text{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
