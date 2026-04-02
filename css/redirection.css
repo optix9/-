@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body{
+  background-image: url("../images/redirection.png");
+  margin: auto;  
+}
+
+#container{
+  background-color: #a4bbd1;
+  border-radius: 20px;
+  width: 500px;
+  height: 700px;
+  align-items: center;
+  padding: 20px;
+}
+
+#container h3{
+  font-weight: 700;
+  font-size: 31px;
+  color: #1b1b6d;
+  font-family: "Funnel Display", sans-serif;
+}
+
+#container h5{
+  font-weight: 700;
+  font-size: 24px;
+  color: #2e2e77;
+  font-family: "Funnel Display", sans-serif;
+}
+
+input{
+  font-weight: 700;
+  font-size: 18px;
+  color: #01011e;
+  font-family: "Funnel Display", sans-serif;
+  border-radius: 10px;
+  background-color: #a6bdc2;
+  padding: 10px 10px 10px;
+  margin: 0;
+}
+
+#submitBtn{
+  font-weight: 700;
+  font-size: 20px;
+  color: #102941;
+  font-family: "Rajdhani", sans-serif; 
+  border-radius: 10px;
+  border: 3px Splid #10263b;
+  background-color: #91aad1;
+  width: 100px;
+  text-align: center;
+  padding-top: 50px;
+}
