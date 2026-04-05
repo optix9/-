@@ -7,48 +7,63 @@ body{
 }
 
 #container{
-  background-color: #a4bbd1;
+  background-image: url("../images/redirection.png");
+  border: 3px Ridge #2942d0;
   border-radius: 20px;
-  width: 500px;
-  height: 700px;
-  align-items: center;
+  width: 600px;
+  height: 600px;
   padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #container h3{
   font-weight: 700;
-  font-size: 31px;
+  font-size: 50px;
   color: #1b1b6d;
   font-family: "Funnel Display", sans-serif;
+  text-align: center;
+  text-shadow:
+    0 0 5px #accfdb,
+    0 0 10px #68cbec,
+    0 0 20px #227198;
+  padding-top: 30px;
 }
 
 #container h5{
   font-weight: 700;
-  font-size: 24px;
-  color: #2e2e77;
-  font-family: "Funnel Display", sans-serif;
+  font-size: 35px;
+  color: #2b2c82;
+  font-family: "Poiret One", sans-serif;
+  text-align: center;
 }
 
 input{
-  font-weight: 700;
   font-size: 18px;
-  color: #01011e;
   font-family: "Funnel Display", sans-serif;
   border-radius: 10px;
-  background-color: #a6bdc2;
+  background-color: #a0d4e0;
   padding: 10px 10px 10px;
   margin: 0;
+  border: 2px Solid Black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 #submitBtn{
-  font-weight: 700;
-  font-size: 20px;
-  color: #102941;
-  font-family: "Rajdhani", sans-serif; 
-  border-radius: 10px;
-  border: 3px Splid #10263b;
-  background-color: #91aad1;
-  width: 100px;
+  text-decoration: none;
+  font-size: 23px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  color: #136287;
+  border: 1px Solid #1b334b;
+  margin-top: 50px;
+  box-shadow: 1px 1px 3px #306c84;
+  background-color: #a0d4e0;
   text-align: center;
-  padding-top: 50px;
 }
