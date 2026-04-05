@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 body{
-  background-image: url("../images/redirection.png");
-  margin: auto;  
+  background-image: url("../images/redirection-bg.png");
+  margin: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 #container{
@@ -29,7 +32,7 @@ body{
     0 0 5px #accfdb,
     0 0 10px #68cbec,
     0 0 20px #227198;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 #container h5{
@@ -38,19 +41,33 @@ body{
   color: #2b2c82;
   font-family: "Poiret One", sans-serif;
   text-align: center;
+  padding-top: 10px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  align-items: center; 
 }
 
 input{
   font-size: 18px;
   font-family: "Funnel Display", sans-serif;
   border-radius: 10px;
-  background-color: #a0d4e0;
+  background-color: #ffffff;
   padding: 10px 10px 10px;
-  margin: 0;
   border: 2px Solid Black;
+  color: black;
+  width: 450px;
+ 
+}
+
+.buttons-redirect{
+  padding-top: 40px;
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #submitBtn{
@@ -58,12 +75,15 @@ input{
   font-size: 23px;
   padding: 10px 20px;
   font-weight: 600;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 300;
-  color: #136287;
-  border: 1px Solid #1b334b;
-  margin-top: 50px;
-  box-shadow: 1px 1px 3px #306c84;
-  background-color: #a0d4e0;
-  text-align: center;
+  font-family: "Funnel Display", sans-serif;
+  color: #13242c;
+  border: 2px Solid #1b334b;
+  box-shadow: 2px 2px 3px #000000;
+  background-color: transparent;
+}
+
+#submitBtn:hover{
+  font-size: 24.5px;
+  transition: 0.5s ease;
+  box-shadow: 3px 3px 5px #7f96a4;
 }
