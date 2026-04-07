@@ -29,6 +29,18 @@
 
     </div>
 
+    <script>
+    
+      $("#submitBtn").click(function(){
+        let name= $("#name").val();
+
+        localStorage.setItem("username", name);
+
+        window.location.href = "../js/dashboard.js";
+      });
+
+    </script>
+
   </body>
 
 
