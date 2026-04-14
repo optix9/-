@@ -2,43 +2,51 @@ import questions from '../data/questions.js';
 
 let currentIndex = 0;
 let score = 0;
+let selectedAnswer = null;
 
-const questions = document.getElementById('question');
-const options = document.getElementById('options');
+const questionEl = document.getElementById('question');
+const optionsEl = document.getElementById('options');
 const submitBtn = document.getElementById('submit-answer');
 
+submitBtn.style.display = 'none';
+
 function loadQuestion(){
-    const currentQuestion = questions[currentIndex];
+  const q = questions[currentIndex];
 
-    questions.textContent = q.question;
-    options.innerHTML = '';
+  questionEl.textContent = q.question;
+  optionsEl.innerHTML = '';
+  selectedAnswer = null;
+  submitBtn.style.display = 'none';
 
-    q.options.forEach(option => {
-        const btn = document.createElement('button');
-        btn.textContent = option;
+  q.options.forEach(option => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = option;
+    btn.className = 'option-btn';
 
-        btn.onclick = () => selectAnswer(option, q.answer);
+    btn.onclick = () => {
+      const prev = optionsEl.querySelector('.selected');
+      if (prev) prev.classList.remove('selected');
+      btn.classList.add('selected');
+      selectedAnswer = option;
+      submitBtn.style.display = 'inline-block';
+    };
 
-        options.appendChild(btn);
-    });
+    optionsEl.appendChild(btn);
+  });
 }
 
-function selectAnswer(selected, correct){
-    if(selected==correct){
-        score++;
-    } 
+submitBtn.addEventListener('click', () => {
+  const q = questions[currentIndex];
+  if (selectedAnswer === q.answer) score++;
 
-    submitBtn.style.display = 'block';
-}
-
-submitBtn.onclick = () => {
   currentIndex++;
-
   if (currentIndex < questions.length){
     loadQuestion();
-    nextButton.style.display = 'none';  
-  } else{
+  } else {
     localStorage.setItem('score', score);
     window.location.href = '../html/results.html';
   }
-};
+});
+
+window.addEventListener('DOMContentLoaded', loadQuestion);
