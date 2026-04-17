@@ -1,3 +1,5 @@
+import { auth, db } from "./firebase.js";
+
 $(function () {
   let name = localStorage.getItem("username");
 

@@ -1,4 +1,5 @@
 import questions from '../data/questions.js';
+import { saveQuizResult } from "./storage.js";
 
 let currentIndex = 0;
 let score = 0;
@@ -42,7 +43,7 @@ function loadQuestion(){
   });
 }
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', async () => {
   const q = questions[currentIndex];
   if (selectedAnswer === q.answer) score++;
 
@@ -53,7 +54,7 @@ submitBtn.addEventListener('click', () => {
 
     const total = questions.length;
     const percentage = Math.round((score / total) * 100);
-    
+
     const resultData = {
       score: score,
       total: total,
@@ -66,9 +67,11 @@ submitBtn.addEventListener('click', () => {
     history.push(resultData);
 
     localStorage.setItem('quizHistory', JSON.stringify(history));
-    localStorage.setItem('latestResult', JSON.stringify(resultData));
+    
+    await saveQuizResult(resultData);
 
-    window.location.href = '../html/results.html';
+    localStorage.setItem('latestResult', JSON.stringify(resultData));
+    window.location.href = './results.html';
   }
 });
 
