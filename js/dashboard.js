@@ -37,7 +37,7 @@ async function loadDashboard() {
 
   results.forEach(r => {
     const p = document.createElement("p");
-    p.textContent = `${r.percentage}% on ${r.date}`;
+    p.textContent = `${r.percentage}% on ${r.createdAt.toDate().toLocaleDateString("en-US", { month: "numeric", day: "numeric" })}`;
     recentDiv.appendChild(p);
   });
 }
