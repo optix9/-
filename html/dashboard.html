@@ -11,24 +11,26 @@
 
 <body>
 
+  <!----------------------------------Main Dashboard Container-------------------------->
+
   <div id="dashboard-container">
 
     <div id="sidebar">
       <h2>Optix</h2>
       <ul>
-        <li id="current">🏠Dashboard</li>
-        <li>📘Start Quiz</li>
-        <li>📝Practice</li>
-        <li>🎮Challenge</li>
-        <li>📜History</li>
-        <li>🏆Achievements</li>
-        <li>🪪Profile</li>
+        <li class="current" id="dashboard-li">🏠Dashboard</li>
+        <li id="start-quiz">📘Start Quiz</li>
+        <li id="practice">📝Practice</li>
+        <li id="challenge">🎮Challenge</li>
+        <li id="history">📜History</li>
+        <li id="achievements">🏆Achievements</li>
+        <li id="profile">🪪Profile</li>
       </ul>
     </div>
 
     <div id="main-area">
 
-      <div class="header-div">
+      <div class="header-div change-class">
         <h1 id="welcome-text">Welcome!</h1>
 
         <div class="p-text-header">
@@ -38,7 +40,7 @@
 
       </div>
 
-      <div class="main-center">
+      <div class="main-center change-class">
 
         <div class="quiz-main">
           <h3>Start Quiz🚀</h3>
@@ -65,9 +67,53 @@
 
       </div>
 
+      <div id="practice-container">
+
+        <h2 id="practice-title">Practice Mode</h2>
+        <p>Here, you can practice specific topics at your own pace.</p>
+
+        <div class="practice-topics">
+
+          <h3 class="prac-title">Practice</h3>
+
+          <div class="button-row">
+            <button class="topic-btn">Algebra</button>
+            <button class="topic-btn">Geometry</button>
+            <button class="topic-btn">Number Theory</button>
+            <button class="topic-btn">Combinatorics</button>
+          </div>
+
+        </div>
+
+        <div class="difficulty">
+
+          <h3 class="prac-title">Choose Difficulty</h3>
+
+          <div class="button-row">
+            <button class="difficulty-btn">Easy</button>
+            <button class="difficulty-btn">Medium</button>
+            <button class="difficulty-btn">Hard</button>
+          </div>
+
+        </div>
+
+        <div class="length-practice">
+
+          <h3 class="prac-title">Choose Length</h3>
+
+          <div class="button-row">
+            <button class="length-btn">5 Questions</button>
+            <button class="length-btn">10 Questions</button>
+            <button class="length-btn">20 Questions</button>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div id="recos">
+    <div id="recos" class="change-class">
       <h3>Recommendations</h3>
       <p>Practice Algebra</p>
       <p>Tip: Focus on weak topics for 15 minutes daily.</p>
@@ -75,10 +121,32 @@
     
   </div>
 
+   <!----------------------------------JAVASCRIPT------------------------------->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="module" src="../js/dashboard.js"></script>
 
+  <script>
+
+    $("#practice-container").hide();
+    $(".change-class").show();
+
+
+    $("#practice").click(function () {
+      $(".change-class").fadeOut();
+      $("#practice-container").fadeIn();
+      $("#dashboard-li").removeClass("current");
+      $("#practice").addClass("current");
+    });
+
+    $("#dashboard-li").click(function () {
+      $(".change-class").fadeIn();
+      $("#practice-container").fadeOut();
+      $("#dashboard-li").addClass("current");
+      $("#practice").removeClass("current");
+    });
+
+  </script>
 
 </body>
 
