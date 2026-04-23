@@ -131,12 +131,68 @@
 
   <!----------------------------------History Container-------------------------->
 
-  <div id="history-continaer">
+  <div id="history-container">
 
-
-
-
+    <h1>History</h1>
     
+    <div id="top-container">
+
+      <div id="topleft-history">
+        <h3>Average Score: </h3>
+        <h3>Best Score: </h3>
+        <h3>Quizzes Taken: </h3>
+        <h3>Current Streak:  </h3>
+      </div>
+
+      <div id="topright-history">
+        <h3>All Quizzes</h3>
+
+        <table id="history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Topic</th>
+              <th>Difficulty</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="history-body">
+          <!-- JS inserts rows here -->
+          </tbody>
+        </table>
+
+        <button id="show-more">Show More</button>
+
+      </div>
+
+    </div>
+
+    <div id="bottom-container">
+      <div id="recent-quizzes-history">
+        <h3>Recent Quizzes</h3>
+
+        <!--ADD CARDS LIKE THIS USING JS-->
+
+       <!-- <div class="quiz-card">
+          <h3>Most Recent Quiz</h3>
+          <p>Topic: __</p>
+          <p>Difficulty: __</p>
+          <p>Score: __</p>
+          <p>Date: __ </p>
+        </div>  -->
+
+      </div>
+
+      <div id="graph">
+        <h3>Performance Graph</h3>
+        <!-- Placeholder for graph -->
+       <!-- <canvas id="performance-chart"></canvas> -->
+       <p>(Graph will be displayed here)</p>
+      </div>
+
+    </div>
+
+
   </div>
 
    <!----------------------------------JAVASCRIPT------------------------------->
@@ -147,6 +203,7 @@
   <script>
 
     $("#practice-container").hide();
+    $("#history-container").hide();
     $(".change-class").show();
 
 
@@ -157,9 +214,17 @@
       $("#practice").addClass("current");
     });
 
+    $("#history").click(function () {
+      $(".change-class").fadeOut();
+      $("#history-container").fadeIn();
+      $("#dashboard-li").removeClass("current");
+      $("#history").addClass("current");
+    });
+
     $("#dashboard-li").click(function () {
       $(".change-class").fadeIn();
       $("#practice-container").fadeOut();
+      $("#history-container").fadeOut();
       $("#dashboard-li").addClass("current");
       $("#practice").removeClass("current");
     });

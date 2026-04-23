@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+#history-container{
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1{
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 700;
+  color: #6fe7e0;
+  text-shadow: 0 1px 0 #00000066;
+  margin: 0 0 12px 0;
+}
+
+#top-container{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: row;
+}
+
+#topleft-history{
+  display: flex;
+  flex-direction: column;
+}
+
+#topleft-history h3{
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 500;
+  color: #9ccbd3;
+  font-size: 18px;
+}
+
+#topright-history{
+  display: flex;
+  gap: 8px;
+}
+
+#topright-histroy h3{
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 500;
+  color: #9ccbd3;
+  font-size: 18px;
+}
+
+#history-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poiret One", sans-serif;
+  color: #9ccbd3;
+}
+
+#history-table th, #history-table td{
+  border: 1px solid #28446633;
+  padding: 12px;
+  text-align: left;
+}
+
+#history-table th{
+  background-color: #90c8d4;
+  color: #232a40;
+  font-weight: 600;
+}
+
+#history-table td{
+  background-color: #28446633;
+  color: #9ccbd3;
+  font-weight: 400;
+}
+
+#show-more{
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 450;
+  color: #0e214b;
+  background-color: #82aeca;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#bottom-container{
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  flex-direction: row;
+}
+
